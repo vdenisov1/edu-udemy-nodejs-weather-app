@@ -1,8 +1,9 @@
 const request = require('request');
+const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json";
 
 let geoCodeAddress = (address, callback) => {
     const options = {
-        url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${process.env.GOOGLE_MAPS_API_KEY}`,
+        url: `${REQUEST_URL}?address=${encodeURIComponent(address)}&key=${process.env.GOOGLE_MAPS_API_KEY}`,
         json: true
     };
 
