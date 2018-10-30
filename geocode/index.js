@@ -1,4 +1,4 @@
-const request = require('request');
+const request = require('axios');
 const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json";
 
 let geoCodeAddress = (address, callback) => {

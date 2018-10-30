@@ -21,14 +21,13 @@ geocode.geoCodeAddress(address, (geocode, error) => {
     if(error) {
         console.log(error);
     }else{
-        console.log(`Address: ${geocode.formatted_address}`);
-        console.log(`Latitude: ${geocode.lat}\nLongitude: ${geocode.lng}`);
+        console.log(`Address: ${geocode.formatted_address} (${geocode.lat},${geocode.lng})`);
 
         forecast.getForecast(geocode.lat, geocode.lng, (forecastResponse, forecastError) => {
             if (forecastError){
                 console.log(forecastError);
             }else{
-                console.log(`Current Temperature: ${forecastResponse.currentTemp}`);
+                console.log(`Current Temperature in ${geocode.formatted_address} is ${forecastResponse.currentTemp} but it feels like ${forecastResponse.apparentTemperature}`);
             }
         });
     }

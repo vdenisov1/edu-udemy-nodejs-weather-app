@@ -9,7 +9,10 @@ let getForecast = (latitude, longitude, callback) => {
 
     request(options, (error, response, body) => {
         if(!error && response.statusCode === 200){
-            callback({ currentTemp: body.currently.temperature }, null);
+            callback({ 
+                currentTemp: body.currently.temperature,
+                apparentTemperature: body.currently.apparentTemperature
+            }, null);
         }else{
             callback(null, 'Unable to fetch weather');
         }
