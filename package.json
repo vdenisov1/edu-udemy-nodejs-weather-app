@@ -1,0 +1,25 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdenisov1/weather-app-node-js-course.git"
+  },
+  "author": "Vlad Denisov <vlad@vdenisov.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vdenisov1/weather-app-node-js-course/issues"
+  },
+  "homepage": "https://github.com/vdenisov1/weather-app-node-js-course#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "request": "^2.88.0",
+    "yargs": "^12.0.2"
+  }
+}
